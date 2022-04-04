@@ -4,6 +4,7 @@ const gameArea = document.querySelector("#game-area");
 const restartBtn = document.querySelector("#restart-btn");
 
 const speed = 2;
+let animationReq;
 
 function startGame() {
     reset();
@@ -11,12 +12,17 @@ function startGame() {
 }
 
 function gameLoop() {
+    updatePoles();
+    animationReq = requestAnimationFrame(gameLoop);
+}
+
+function updatePoles() {
     // TODO
-    requestAnimationFrame(gameLoop);
 }
 
 function reset() {
     // TODO
 }
+cancelAnimationFrame(animationReq);
 
 restartBtn.addEventListener('click', startGame);
