@@ -2,6 +2,7 @@
 const poles = document.querySelectorAll(".pole");
 const gameArea = document.querySelector("#game-area");
 const restartBtn = document.querySelector("#restart-btn");
+const containerWidth = gameArea.clientWidth;
 
 const speed = 2;
 let animationReq;
@@ -21,6 +22,13 @@ function updatePoles() {
     let polesCurrentPos = parseFloat(
         window.getComputedStyle(poles[0]).getPropertyValue("right")
     );
+    
+    //  Check whether the poles went putside of game area.
+    if (polesCurrentPos > containerWidth) {
+        // Generate new poles
+        // Move poles back to the right-hand side of game area.
+        polesCurrentPos = 0; // This is based on the "right" property.  
+    }
 
     poles.forEach((pole) => {
         pole.style.right = `${polesCurrentPos + speed}px`;
