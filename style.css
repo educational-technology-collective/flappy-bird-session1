@@ -28,3 +28,16 @@
     cursor: pointer;
     outline: none;
 }
+.pole {
+    position: absolute;
+    height: 100px;
+    width: 30px;
+    background-color: green;
+    right: 0px;
+}
+#pole-1 {
+    top: 0;
+}
+#pole-2 {
+    bottom: 0;
+}
