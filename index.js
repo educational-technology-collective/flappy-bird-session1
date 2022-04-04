@@ -12,6 +12,7 @@ function startGame() {
 
 function gameLoop() {
     // TODO
+    requestAnimationFrame(gameLoop);
 }
 
 function reset() {
