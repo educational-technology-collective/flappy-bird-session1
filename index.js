@@ -21,6 +21,10 @@ function updatePoles() {
     let polesCurrentPos = parseFloat(
         window.getComputedStyle(poles[0]).getPropertyValue("right")
     );
+
+    poles.forEach((pole) => {
+        pole.style.right = `${polesCurrentPos + speed}px`;
+    });
 }
 
 function reset() {
