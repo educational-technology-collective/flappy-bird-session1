@@ -4,3 +4,18 @@ const gameArea = document.querySelector("#game-area");
 const restartBtn = document.querySelector("#restart-btn");
 
 const speed = 2;
+
+function startGame() {
+    reset();
+    gameLoop();
+}
+
+function gameLoop() {
+    // TODO
+}
+
+function reset() {
+    // TODO
+}
+
+restartBtn.addEventListener('click', startGame);
