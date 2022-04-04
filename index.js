@@ -17,7 +17,10 @@ function gameLoop() {
 }
 
 function updatePoles() {
-    // TODO
+    // Move poles
+    let polesCurrentPos = parseFloat(
+        window.getComputedStyle(poles[0]).getPropertyValue("right")
+    );
 }
 
 function reset() {
