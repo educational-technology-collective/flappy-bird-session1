@@ -28,8 +28,12 @@ function updatePoles() {
 }
 
 function reset() {
-    // TODO
+    poles.forEach((pole) => {
+        pole.style.right = 0;
+    });
+    if (animationReq) {
+        cancelAnimationFrame(animationReq);
+    }
 }
-cancelAnimationFrame(animationReq);
 
 restartBtn.addEventListener('click', startGame);
